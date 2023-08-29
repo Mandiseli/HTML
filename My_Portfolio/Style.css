@@ -1,0 +1,86 @@
+            body{
+                background: lavenderblush;
+                height: auto;
+                display: grid;
+                place-items: center;
+            }
+            img{
+                border-radius: 20px;
+                height: auto;
+                width: 100%;
+                float: left;
+                margin-right: 100px;
+                
+            }
+            .img-fluid{
+                border-radius: 10px;
+                float : left;
+                margin: right;
+            }
+            figure{
+                border: thin #c0c0c0 solid;
+                display: flex;
+                flex-flow: column;
+                padding: 3px;
+                max-width: 220px;
+                margin: auto;
+            }
+            figcaption{
+                font-style: italic;
+                text-align: center;
+                padding: 3px;
+                color: #070707;
+            }
+            .username{
+                font-weight: bold;
+                font-size: 35px;
+                
+            }
+            .Welcome{
+                font-weight: bold;
+                font-size: 55px;
+            }
+            *{
+                padding: 0%;
+                margin: 0%;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            }
+            nav{
+                background: burlywood;
+                height: 80px;
+                width: 100%;
+            }
+            nav ul{
+                float: right;
+                margin-right: 20px;
+            }
+
+
+            nav ul li{
+                display: inline-block;
+               line-height: 80px;
+                margin: 0 5px;
+            }
+            label.logo{
+                color: white;
+                font-size: 35px;
+                line-height: 80px;
+                padding: 0 100px;
+                font-weight: bold;
+            }
+            nav ul li a{
+                color: white;
+                font-size: 17px;
+                padding: 17px 13px;
+                border-radius: 3px;
+                text-transform: uppercase;
+            }
+            a.active, a.hover{
+                background: #1b9bff;
+                transition: .5s;
+            }
+            .navbar-link li:hover{
+                background-color: #1b9bff;
+            }
