@@ -7,48 +7,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My.css">
+    <script src="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.js"></script>
 </head>
 <body>
-    <nav class="topnav" aria-label="Main Menu">
+    <div>
+    <header>
+        <div class="nav">
+            <div class="topnav">
+    <!--<nav class="topnav" aria-label="Main Menu">-->
         
-            <a href="My_Portfolio/My_Document/portfolio.html">Home</a>
+            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a>
             <a href="active">Contact Me</a>
             <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a>
             <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a>
             <a href="">Experience & Education</a>
             <a href="">My Services</a>
-        
-    </nav>
-    
+             </div>
+         </div>
+    </header>
+    </div>
 
-<form action="contactme.html" method="get">
-  <div class="form">
-<div>
+    
+    <div class="container">
+        <div class="head"> 
+            <h2>Message Me</h2>
+        </div>
+<form id="form" class="form" action="contactme.html">
+    <div class="form-control success">
+        <label>Name</label>
+        <input type="text" placeholder="name" id="name" required>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error Message</small>
+
+    </div>
+    <div class="form-control success">
+        <label>Surname</label>
+        <input type="text" placeholder="Surname" id="surname" required>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error Message</small>
+
+    </div>
+    <div class="form-control error">
+        <label>Email</label>
+        <input type="email" placeholder="mandiseli@outlook.com" id="email">
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error Message</small>
+
+    </div>
+    <div class="input-control">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" cols="30" rows="15" required></textarea>
+        <i class="fas fa-check-circle"></i>
+        <i class="fas fa-exclamation-circle"></i>
+        <small>Error Message</small>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    
+ <!-- <h2>Message Me</h2>
+  <div class="container">
+<div class="input-control">
   <label for="name">Name:</label><br>
   <input type="text" id="name" name="name"><br>
+  <div class="error"></div>
 </div>
-<div>
+<div class="input-control">
   <label for="surname">Surname:</label><br>
   <input type="text" id="surname" name="surname"><br><br>
+  <div class="error"></div>
 </div>
 <div>
   <label for="phone"><b><u></u></b>Phone Number</label>
   <input id="phone" name="phone" type="tel">
+  <div class="error"></div>
 </div>
-<div>
+<div class="input-control">
 <label for="email">Email</label>
-  <input id="email" name="email" type="email" placeholder="mandiseli@outlook.com">
+  <input id="email" name="email" type="email">
+  <div class="error"></div>
+
 </div>
-<div>
-    <label for="textarea">Text Area</label>
-    <textarea id="textarea" name="textarea" cols="30" rows="15"></textarea>
+<div class="input-control">
+    <label for="message">Message</label>
+    <textarea id="message" name="message" cols="30" rows="15"></textarea>
+    <div class="error"></div>
 </div>
 <div>
     <button type="submit">Submit</button>
 </div>
-  </div>
+  </div> -->
 </form> 
-
 
 </body>
 </html>

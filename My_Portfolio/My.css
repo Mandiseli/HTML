@@ -1,3 +1,5 @@
+
+
 /* add a black background color to the top navigation */
 .topnav{
     background-color: #333;
@@ -18,6 +20,12 @@
   align-content: flex-end;
   
 }
+/* Style the active tab */
+#navMenu li.active {
+  background-color: #3498db; /* Change to your desired color */
+  color: #fff; /* Change to your desired text color */
+}
+
 .nav{
     align-content: end;
 }
@@ -33,14 +41,13 @@
     background-color: #04AA6D;
     color: white;
 }
-body{
+.body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url("images/Black White Minimalist SImple Monogram Typography Logo.png");
+    background-color: aquamarine;
     border: 10px black;
-    background-color: blue;
-    background-repeat: repeat;
     background-size: cover;
     align-items: center;
+    justify-content: center;
 
 }
 .welcome{
@@ -57,13 +64,14 @@ body{
 }
 .intro{
     font-family: Arial, Helvetica, sans-serif;
-    color: #112d4e;
+    color: #3e8e41;
     font-style: normal;
     font-size: large;
     font-weight: bold;
     padding: 14px;
-    text-align: left;
+    text-align: center;
     text-decoration: #04AA6D;
+    align-content: center;
 }
 .name{
     font-family: Arial, Helvetica, sans-serif;
@@ -72,8 +80,9 @@ body{
     font-style: normal;
     font-weight: bold;
     padding: 12px;
-    text-align: left;
+    text-align: center;
     text-decoration: #04AA6D;
+    align-content: center;
 
 
 }
@@ -84,8 +93,9 @@ body{
     font-style: normal;
     font-weight: bolder;
     padding: 12px;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
+    align-content: center;
 
 }
 .webDev h2{
@@ -125,11 +135,11 @@ a{
     color: white;
 
 }
-button{
+.myCV{
     border: 2px solid #112d4e;
     background-color: #a82a2a;
-    padding: 10px 24px;
-    width: 100px;
+    padding: 30px 50px;
+    width: 200px;
     text-align: center;
     cursor: pointer;
     margin: 4px 2x;
@@ -139,7 +149,7 @@ button{
     border-radius: 12px;
     transition: 0.5s;
     box-shadow: 0 9px #999;
-    align-items: center;
+    align-content: center;
 }
 button[type=mycv]:hover{
     background-color: bisque;
@@ -152,9 +162,13 @@ button:active{
 img{
     border: 2px solid #ddd;
     border-radius: 50%;
-    padding: 5px;
+    padding: 20px 30px;
     align-items: center;
-
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    align-content: center;
+    
 }
 *{
     padding: 0;
@@ -163,6 +177,7 @@ img{
 }
 footer{
     background-color: #333;
+    padding: 30px;
 }
 .footercontainer{
     width: 100;
@@ -236,22 +251,146 @@ footer{
     }
 }
 /*contact*/
-.form {
-    text-align: left;
+
+/* * {
+    box-sizing:border-box;   
+   }
+   
+   body {
+       background-color: purple;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       min-height: 100vh;
+       margin: 0;
+   }
+   
+   .container {
+       background-color: aliceblue;
+       border-radius: 5px;
+       box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+       width: 400px;
+       max-width: 100%;
+   }
+   
+   .head{
+       background-color: #f7f7f7;
+       border-bottom: 1px solid #f0f0f0;
+       padding: 20 px 40px;
+   
+   }
+   
+   .head h2 {
+       margin: 0;
+   }
+   
+   .form{
+       padding: 30px 40px;
+   }
+   
+   .form-control{
+       margin-bottom: 10px;
+       padding-bottom: 20px;
+       position: relative;
+   }
+   
+   .form-control label{
+       display: inline-block;
+       margin-bottom: 5px;
+   }
+   
+   .form-control input{
+       border: 2px solid#f0f0f0;
+       border-radius: 5px;
+       display: block;
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 14px;
+       padding: 10px;
+       width: 100%;
+   }
+   .form-control.success input{
+       border-color: green;
+   }
+   
+   .form-control.error input{
+       border-color: red;
+   }
+   
+   .form-control i{
+       position: absolute;
+       top: 40px;
+       right: 10px;
+       visibility: hidden;
+   }
+   
+   .form-control.error i.fa-check-circle {
+       color: red;
+       visibility: visible;
+   }
+   .form-control.form-control.success i.fa-exclamation-circle {
+       color: green;
+       visibility: visible;
+   }
+   .form-control small{
+       visibility: hidden;
+       position: absolute;
+       bottom: 0;
+       left: 0;
+   }
+   
+   .form button{
+       background-color: aqua;
+       border: 2px solid aqua;
+       border-radius: 4px;
+       color: #fff;
+       display: block;
+       font-family: 'Times New Roman', Times, serif;
+       font-size: 16px;
+       padding: 10px;
+       width: 100%;
+   }*/
+
+   * {
+    box-sizing:border-box;   
+   }
+   .form {
+    padding: 10px 20px;
+}
+
+.head{
+    background-color: black;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20 px 40px;
+}
+
+.head h2 {
+    margin: 0;
+}
+.container {
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 3);
+    width: 600px;
+    max-width: 300%;
+    padding: 30px 20px;
+}
+
+
+.form-control{
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.form-control input{
+    border: 2px solid#f0f0f0;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
     padding: 10px;
+    width: 100%;
 }
-
-input[type=text], ::-webkit-keygen-select{
-    width: 40%;
-    padding: 1px 2px;
-    margin: 2px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    box-sizing: border-box;
-
-}
-button[type=submit]{
+.form Button[type=submit]{
     width: 50%;
     background-color: blue;
     color: white;
@@ -261,43 +400,80 @@ button[type=submit]{
     border-radius: 4px;
     cursor: pointer;
 }
-textarea{
+.form-control textarea{
     width: 50%;
     padding: 5px 7px;
     margin: 8px 0;
     border: 5px solid black;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
     border-radius: 8px;
     box-sizing: border-box;
 }
-button[type=submit]:hover{
+.form Button[type=submit]:hover{
     background-color: green;
 }
-div{
+
+.form-control.success input{
+    border-color: green;
+}
+
+.form-control.error input{
+    border-color: red;
+}
+.form-control i{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+.form-control.error i.fa-check-circle {
+    color: red;
+    visibility: visible;
+}
+.form-control.form-control.success i.fa-exclamation-circle {
+    color: green;
+    visibility: visible;
+}
+
+.form-control small{
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/* div{
     border-radius: 5px;
     background-color: grey;
     padding: 5px;
+}*/
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
 }
-label{
-    padding: 2px 4px;
-    color: black;
-    font-weight: bold;
-    display: block;
-}
-label:after{content: ":"}
-body{
-    background-image: url("C:\Users\Mandiseli Mfeya\Desktop\HTML\images\Black White Minimalist SImple Monogram Typography Logo.png");
+.form label:after{content: ":"}
+body {
+    background-color: purple;
+    display: contents;
+    align-items: center;
+    justify-content: center;
+    min-height: 1000vh;
+    margin: 0;
 }
 
 /*skills*/
 
 /*about Me*/
-h2{
+.heading{
     text-align: center;
     color: #04AA6D;
     text-transform: uppercase;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
-    border-radius: 30px;
+    border-radius: 10px;
+    padding: 10px 10px;
+    align-content: center;
    
 }
 P{
@@ -306,20 +482,45 @@ P{
     font-weight: bold;
     padding: 10px 30px;
     font-family: Arial, Helvetica, sans-serif;
+    border: #000;
 }
 table, th, td{
     border: 4px solid black;
+    align-content: center;
 }
 table.center{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    align-content: center;
+    padding: 10px 20px;
+}
+
+.hireMe{
+    padding: 15px 20px;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    width: 300%;
+    align-content: center;
 }
 .aboutme{
     width: 800px;
-    border: 15px solid green;
-    padding: 50px;
+    /*border: 15px solid black;*/
+    padding: 50px 30px;
     margin: 20px;
+    text-align: center;
+    align-content: center;
+
+}
+.contact{
+    text-align: center;
+    color: #04AA6D;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 30px;
+    padding: 10px 10px;
 
 }
 /* add a black background color to the top navigation */

@@ -7,27 +7,42 @@
     <link rel="stylesheet" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My.css">
 </head>
 <body>
-    <nav role="navskills" aria-label="Main Menu">
+    <div>
+        <header>
+            <div class="nav">
+            <div class="topnav" id="topnav">
+                <a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html" onclick="changeTabColor(this)">Home</a>
+                <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html" onclick="changeTabColor(this)">About me</a>
+                <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html" onclick="changeTabColor(this)">Skills</a>
+                <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html" onclick="changeTabColor(this)">Contacts</a>
+                <a href="education.html" onclick="changeTabColor(this)">Experiance & Education</a>
+                <a href="" onclick="changeTabColor(this)">My Services</a>
+              </div>
+            </div>
+        </header>
         
-            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My_Document\portfolio.html">Home</a>
-            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a>
-            <a href="active">About Me</a>
-            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a>
-            <a href="">Experience & Education</a>
-            <a href="">My Services</a>
-    </nav>
-    <h2><u>About me</u></h2>
-    
-    <p class="aboutme">i am energetic, goal-driven National Diploma in Information Technology Graduate with a solid academic background specializing in Business Applications mainly Information Systems, Development Software, Business Analysis and Technical support.
+
+        <div class="heading">
+        <h2><u>About me</u></h2>
+        </div>
+        <div class="Picture">
+            <img src="C:\Users\Mandiseli Mfeya\Desktop\HTML\images\Mandiseli.jpg" alt="myself">
+        </div>
+
+    <div class="aboutMe">
+    <p>i am energetic, goal-driven National Diploma in Information Technology Graduate with a solid academic background specializing in Business Applications mainly Information Systems, Development Software, Business Analysis and Technical support.
 
         My focus is on building my career in Tech space and learning as much as I can.
         
         I am seeking for vacant position which can be a graduate internship or entry level job in the field that aligns with my studies.
     </p>
-    </article>
+    </div>
+    
     <div>
+        <div class="contact">
         <h2>MY CONTACT DETAILS:</h2>
-        <table class="centre">
+        </div>
+        <table class="center">
         <tr>
             <th>Name</th>
             <th>Qualifications</th>
@@ -47,7 +62,10 @@
             <td>7 years</td>
         </tr>
         </table>
-        <button type="hireme">Hire Me</button>
+
+        <div class="hireMe">
+        <button type="hireme" class=>Hire Me</button>
+        </div>
         
     </div>
 </body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript OnSubmit Event example</title>
+    <link href="">
+    <script src="js/onsubmit_event.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <form action="#" method="post" onsubmit="return validationEvent()">
+                <h2>Javascript Onsubmit event example</h2>
+                <label>Name</label>
+                <input id="name" name="name" placeholder="name" type="text">
+                <label>Email</label>
+                <input id="email" name="email" placeholder="valid email" type="text">
+                <label>Gender</label>
+                <input id="male" name="gender" value="Male" type="radio">
+                <label>Male</label>
+                <input id="female" name="gender" value="female" type="radio">
+                <label>Female</label>
+                <label>Contact No</label>
+                <input id="contact" name="contact" placeholder="Contact No" type="text">
+                <input type="submit" value="submit">
+                <span>All type of validation will execute on OnSubmit Event</span>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

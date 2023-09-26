@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Form Validation</title>
+</head>
+<body onload="document.form1.text1.focus()">
+    <div class="mail">
+        <h2>Input an email and submit</h2>
+        <form name="form1" action="#">
+            <ul>
+                <li><input type="text" name="text1"></li>
+                <li>&nbsp;</li>
+                <li class="submit"><input type="submit" value="submit" onclick="validateMail(document.form1.text1)"></li>
+                <li>&nbsp;</li>
+            </ul>
+        </form>
+    </div>
+    <script src="mail-validation.js"></script>
+
+</body>
+</html>
