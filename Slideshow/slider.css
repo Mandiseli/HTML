@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 .container{
-    width: 100%;
-    height: 100vh;
+    width: 60%;
+    height: 80vh;
     background: #222;
     display: flex;
     align-items: center;
@@ -13,16 +13,18 @@
 }
 
 .swiper{
-    width: 80%;
-    height: fit-content;
+    width: 60%;
+    height: 70%;
 }
 
 .swiper-slide img{
     width: 100%;
+    
+   
 }
 
 .swiper .swiper-button-prev, .swiper .swiper-button-prev{
-    color: #fff;
+    color: #fff #fff;
 
 }
 .swiper .swiper-pagination-bullet-active{

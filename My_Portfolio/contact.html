@@ -1,106 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>  
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Form</title>
     <link rel="stylesheet" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My.css">
-    <script src="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.js"></script>
 </head>
 <body>
-    <div>
-    <header>
-        <div class="nav">
-            <div class="topnav">
-    <!--<nav class="topnav" aria-label="Main Menu">-->
-        
-            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a>
-            <a href="active">Contact Me</a>
-            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a>
-            <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a>
-            <a href="">Experience & Education</a>
-            <a href="">My Services</a>
-             </div>
-         </div>
-    </header>
+    <nav>
+        <label class="logo">Mandiseli Mfeya</label>
+        <ul>
+            <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
+            <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
+            <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
+            <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
+            <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
+            <li><a href="#">Education & Experience</a></li>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <form onsubmit="validateForm(); return false;">
+            <h3>CONTACT ME</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <span id="nameError" class="error"></span>
+
+            <input type="email" id="email" placeholder="Email Address" required>
+            <span id="emailError" class="error"></span>
+
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <span id="phoneError" class="error"></span>
+
+            <textarea id="message" rows="10" placeholder="Send Me A Message" required></textarea>
+            <span id="messageError" class="error"></span>
+
+            <button type="submit">Send</button>
+        </form>
     </div>
 
-    
-    <div class="container">
-        <div class="head"> 
-            <h2>Message Me</h2>
-        </div>
-<form id="form" class="form" action="contactme.html">
-    <div class="form-control success">
-        <label>Name</label>
-        <input type="text" placeholder="name" id="name" required>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function validateForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+            const nameError = document.getElementById("nameError");
+            const emailError = document.getElementById("emailError");
+            const phoneError = document.getElementById("phoneError");
+            const messageError = document.getElementById("messageError");
 
-    </div>
-    <div class="form-control success">
-        <label>Surname</label>
-        <input type="text" placeholder="Surname" id="surname" required>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
+            // Reset error messages
+            nameError.textContent = "";
+            emailError.textContent = "";
+            phoneError.textContent = "";
+            messageError.textContent = "";
 
-    </div>
-    <div class="form-control error">
-        <label>Email</label>
-        <input type="email" placeholder="mandiseli@outlook.com" id="email">
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
+            // Validation rules (you can customize these)
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phonePattern = /^\d{10}$/;
 
-    </div>
-    <div class="input-control">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" cols="30" rows="15" required></textarea>
-        <i class="fas fa-check-circle"></i>
-        <i class="fas fa-exclamation-circle"></i>
-        <small>Error Message</small>
-    </div>
-    <div>
-        <button type="submit">Submit</button>
-    </div>
-    
- <!-- <h2>Message Me</h2>
-  <div class="container">
-<div class="input-control">
-  <label for="name">Name:</label><br>
-  <input type="text" id="name" name="name"><br>
-  <div class="error"></div>
-</div>
-<div class="input-control">
-  <label for="surname">Surname:</label><br>
-  <input type="text" id="surname" name="surname"><br><br>
-  <div class="error"></div>
-</div>
-<div>
-  <label for="phone"><b><u></u></b>Phone Number</label>
-  <input id="phone" name="phone" type="tel">
-  <div class="error"></div>
-</div>
-<div class="input-control">
-<label for="email">Email</label>
-  <input id="email" name="email" type="email">
-  <div class="error"></div>
+            let isValid = true;
 
-</div>
-<div class="input-control">
-    <label for="message">Message</label>
-    <textarea id="message" name="message" cols="30" rows="15"></textarea>
-    <div class="error"></div>
-</div>
-<div>
-    <button type="submit">Submit</button>
-</div>
-  </div> -->
-</form> 
+            if (!name) {
+                nameError.textContent = "Name is required";
+                isValid = false;
+            }
 
+            if (!email.match(emailPattern)) {
+                emailError.textContent = "Invalid email format";
+                isValid = false;
+            }
+
+            if (!phone.match(phonePattern)) {
+                phoneError.textContent = "Phone number must be 10 digits";
+                isValid = false;
+            }
+
+            if (!message) {
+                messageError.textContent = "Message is required";
+                isValid = false;
+            }
+
+            if (isValid) {
+                // If the form is valid, send the email
+                sendEmail();
+            }
+        }
+
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "maramfeya@gmail.com",
+                Password: "password",
+                To: 'mmetuso@gmail.com',
+                From: document.getElementById("email").value,
+                Subject: "New Contact Form enquiry",
+                Body: "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Phone no: " + document.getElementById("phone").value
+                    + "<br> Message: " + document.getElementById("message").value
+            }).then(
+                message => alert("Message Sent Successfully")
+            );
+        }
+    </script>
 </body>
 </html>

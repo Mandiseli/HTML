@@ -4,36 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
-    <nav class="topnav" aria-label="Main Menu">
-        
-        <a href="My_Portfolio/My_Document/portfolio.html">Home</a>
-        <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a>
-        <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a>
-        <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a>
-        <a href="">Experience & Education</a>
-        <a href="active">My Services</a>
-    
-</nav>
-    <div class="webDev">
-        <h2>Web Development</h2>
-        <p>Building, Creating and Maintaining.<br>View my portfolio and allow me to and get your website online in no time. </p>
-    </div>
-    <div class="systemDev">
-        <h2>Software Developer</h2>
-        <p>As a software developer experienced in JavaScript, VB.Net, Java and Python, I specialize in Software Application. You can find some of my project on my GitHub Profile</p>
+    <div>
+        <!--<nav>
+            <label class="logo">Mandiseli Mfeya</label>
+            <ul>
+                <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
+                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
+                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
+                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
+                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
+                <li><a href="">Education & Experience</a></li>
+            </ul>
+        </nav>-->
 
-    </div>
-    <div class="pyDev">
-        <h2>Python Developer</h2>
-        <p>A Python Developer specializes in programming and software Development using the python language.</p>
-    </div>
-    <div class="javaDev">
-        <h2>Java Developer</h2>
-        <p>Java developer use the Java language for programming and software Development.</p>
-    </div>
-    
+        <div class="navbar">
+            <label class="logo">Mandiseli Mfeya</label>
+            <input type="checkbox" id="menu-toggle">
+            <ul id="menu">
+              <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
+              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
+              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
+              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
+              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
+              <li><a href="">Education & Experience</a></li>
+            </ul>
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        </div>
+          
+ 
+        <section> 
+            <div class="row">
+                <h2 class="section-heading">My Services</h2>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-python"></i>
+                            
+                        </div>
+                        <h3>Python Development</h3>
+                        <p>A Python Developer specializes in programming and software Development using the python language.</p>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-regular fa-globe-pointer"></i>
+                            
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Building, Creating and Maintaining. View my portfolio and allow me to and get your website online in no time.</p>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-code"></i>
+                            
+                        </div>
+                        <h3>Software Developer</h3>
+                        <p>As a software developer experienced in JavaScript, VB.Net, Java and Python, I specialize in Software Application. You can find some of my project on my GitHub Profile</p>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-brands fa-java"></i>
+                            
+                        </div>
+                        <h3>Java Developer</h3>
+                        <p>Java developer use the Java language for programming and software Development.</p>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="icon-wrapper">
+                            <i class="fa-sharp fa-solid fa-computer-classic"></i>
+                            
+                        </div>
+                        <h3>IT Technical Support</h3>
+                        <p>A Python Developer specializes in programming and software Development using the python language.</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+    <script>
+        // Add this JavaScript code if you want to close the menu when a menu item is clicked on smaller screens
+        var menuToggle = document.getElementById('menu-toggle');
+        var menu = document.getElementById('menu');
+
+        menu.addEventListener('click', function () {
+            if (window.innerWidth <= 768) {
+            menuToggle.checked = false;
+         }
+    });
+
+    </script>
 </body>
 </html>
