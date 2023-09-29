@@ -7,31 +7,36 @@
         <link rel="stylesheet" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My.css">
 </head>
 <body>
-    
-        <!--<nav>
-            <label class="logo">Mandiseli Mfeya</label>
-            <ul>
-                <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
-                <li><a href="#">Education & Experience</a></li>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="nav-branding">MFEYA.M</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutme.html" class="nav-link">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact Me</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="education.html" class="nav-link">Education & Experience</a>
+                </li>
+
             </ul>
-        </nav>-->
-        <div class="navbar">
-            <label class="logo">Mandiseli Mfeya</label>
-            <input type="checkbox" id="menu-toggle">
-            <ul id="menu">
-              <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
-              <li><a href="">Education & Experience</a></li>
-            </ul>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
           
         <section id="skill-section">
             <div class="header skill-head">
@@ -113,6 +118,20 @@
         
             // Trigger the animation when the page is loaded
             window.addEventListener('load', animateSkillBars);
+        </script>
+        <script>
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            hamburger.addEventListener("click", () =>{
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
+            })
+        
+            document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
+        
+            }))
         </script>
 </body>
 </html>

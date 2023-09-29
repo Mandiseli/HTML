@@ -9,32 +9,40 @@
     <!--<script src="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.js"></script>-->
 </head>
 <body>
-    <div class="hero">
-        <!--<nav>
-            <label class="logo">Mandiseli Mfeya</label>
-            <ul>
-                <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
-                <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
-                <li><a href="#">Education & Experience</a></li>
-            </ul>
-        </nav>-->
+    <class="hero">
 
-        <div class="navbar">
-            <label class="logo">Mandiseli Mfeya</label>
-            <input type="checkbox" id="menu-toggle">
-            <ul id="menu">
-              <li><a class="active" href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\portfolio.html">Home</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\aboutme.html">About Me</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\contact.html">Contact Me</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\skills.html">Skills</a></li>
-              <li><a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\services.html">Services</a></li>
-              <li><a href="">Education & Experience</a></li>
-            </ul>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-        </div>
+       
+        <header>
+            <nav class="navbar">
+                <a href="#" class="nav-branding">MFEYA.M</a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="aboutme.html" class="nav-link">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="services.html" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="education.html" class="nav-link">Education & Experience</a>
+                    </li>
+
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
           
  
 
@@ -44,20 +52,21 @@
             <h2>I am Full-stack <span>Software Developer</span></h2>
             <p>This is my official portfolio website to show all my <br> Details and work Experience</p>
             <a href="C:\Users\Mandiseli Mfeya\Desktop\HTML\My_Portfolio\My_Document\Mandi Mfeya .pdf">DOWNLOAD CV</a>
+            <a href="contact.html">HIRE ME</a>
 
         </div>  
         <div class="picture">
-            <img src="" class="shape">
+            <img src="C:\Users\Mandiseli Mfeya\Desktop\HTML\images\shape.jpg" class="shape">
             <img src="C:\Users\Mandiseli Mfeya\Desktop\HTML\images\Mandiseli.jpg" class="me">
 
         </div>
+    
     </div>
-
     <footer>
         <div class="footercontainer">
             <div class="socialicons">
                 <a href="https://www.facebook.com/mandiseli.mfeya"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/mandiseli-mfeya-357491261"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/mandiseli-mfeya-357491261/"><i class="fa-brands fa-linkedin"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
                 <a href=""><i class="fa-brands fa-github"></i></a>
                 <a href=""><i class="fa-brands fa-whatsapp"></i></a>
@@ -66,19 +75,32 @@
         </div>
         <div class="footnav">
             <ul>
-                <li><a href="#home">Home</a></li>
+                <!--<li><a href="#home">Home</a></li>
                 <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#contacts">Contacts</a></li>-->
                 
             </ul>
         </div>
         <div class="footerbottom">
-            <p>copyright &copy; 2023; Designed by<span class="Designer">Mandiseli Mfeya</span></p>
+            <p>copyright &copy; 2023; Designed by<span class="Designer"> Mandiseli Mfeya</span></p>
 
         </div>
 
     </footer>
-</div>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    hamburger.addEventListener("click", () =>{
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+    })
+
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () =>{
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+
+    }))
+</script>
 </body>
 </html>
